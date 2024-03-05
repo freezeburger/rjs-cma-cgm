@@ -1,11 +1,18 @@
-import React, { FC } from 'react';
+import { FC, PropsWithChildren } from 'react';
 import { LayoutBaseWrapper } from './LayoutBase.styled';
 
-interface LayoutBaseProps {}
+import './LayoutBase.css';
 
-const LayoutBase: FC<LayoutBaseProps> = () => (
+/*
+interface LayoutBaseProps {
+   chidlren:ReactNode | undefined
+} 
+*/
+interface LayoutBaseProps extends PropsWithChildren{}
+
+const LayoutBase: FC<LayoutBaseProps> = ({children}) => (
  <LayoutBaseWrapper>
-    LayoutBase Component
+    { children }
  </LayoutBaseWrapper>
 );
 

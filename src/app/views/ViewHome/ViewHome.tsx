@@ -1,11 +1,13 @@
-import React, { FC } from 'react';
-
+import { FC } from 'react';
+import { LayoutTwoColumn } from '../../layouts';
 
 interface ViewHomeProps {}
 
 const ViewHome: FC<ViewHomeProps> = () => (
   <div data-testid="ViewHome">
-    ViewHome Component
+    <LayoutTwoColumn>
+      ViewHome Component
+    </LayoutTwoColumn>
   </div>
 );
 
