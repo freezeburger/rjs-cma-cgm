@@ -1,10 +1,11 @@
-import { Children, FC, PropsWithChildren, ReactNode } from 'react';
+import { Children, FC, JSX} from 'react';
 import { LayoutTwoColumnWrapper } from './LayoutTwoColumn.styled';
 import LayoutBase from '../LayoutBase/LayoutBase';
 
-interface LayoutTwoColumnProps  extends PropsWithChildren{ 
-   // children:typeof ContentAside | typeof ContentMain | Array<typeof ContentAside | typeof ContentMain >
-   // children: FC<PropsWithChildren> |  FC<PropsWithChildren>[]
+interface SlotProps{}
+
+interface LayoutTwoColumnProps{ 
+   children:JSX.Element | JSX.Element[]
 }
 
 const LayoutTwoColumn: FC<LayoutTwoColumnProps> = ({ children }) => {
@@ -26,7 +27,7 @@ const LayoutTwoColumn: FC<LayoutTwoColumnProps> = ({ children }) => {
    )
 };
 
-export const ContentAside: FC<PropsWithChildren> = () => false;
-export const ContentMain: FC<PropsWithChildren> = () => false;
+export const ContentAside: FC<SlotProps> = () => false;
+export const ContentMain: FC<SlotProps> = () => false;
 
 export default LayoutTwoColumn;

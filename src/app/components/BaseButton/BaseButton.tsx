@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from 'react';
+import { EventHandler, FC, MouseEvent, PropsWithChildren } from 'react';
 import { BaseButtonWrapper } from './BaseButton.styled';
 import { Button } from '@mui/material';
 
@@ -17,8 +17,12 @@ const BaseButton: FC<BaseButtonProps> = (props) => (
    </BaseButtonWrapper>
 );
 
-export const ButtonSuccess: FC<PropsWithChildren> = (props) => <BaseButton color="success" children={props.children}/>
-export const ButtonError: FC<PropsWithChildren> = (props) => <BaseButton color="error" children={props.children}/>
-export const ButtonPrimary: FC<PropsWithChildren> = (props) => <BaseButton color="primary" children={props.children} />
+interface ButtonProps extends PropsWithChildren { 
+   onClick?:EventHandler<MouseEvent<HTMLElement>>
+}
+
+export const ButtonSuccess: FC<ButtonProps> = (props) => <BaseButton color="success" children={props.children}/>
+export const ButtonError: FC<ButtonProps> = (props) => <BaseButton color="error" children={props.children}/>
+export const ButtonPrimary: FC<ButtonProps> = (props) => <BaseButton color="primary" children={props.children} />
 
 export default BaseButton;

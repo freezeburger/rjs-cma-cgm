@@ -12,7 +12,7 @@ const ViewHome: FC<ViewHomeProps> = () => (
       <ContentMain>MAIN
 
         <BaseButton>CLICK</BaseButton>
-        
+
         <ButtonError>CLICK</ButtonError>
         <ButtonSuccess>CLICK</ButtonSuccess>
         <ButtonPrimary>CLICK</ButtonPrimary>
