@@ -1,13 +1,16 @@
 import { FC } from 'react';
-import { LayoutTwoColumn } from '../../layouts';
+import { ContentAside, ContentMain, LayoutTwoColumn } from '../../layouts';
 
 interface ViewHomeProps {}
 
 const ViewHome: FC<ViewHomeProps> = () => (
   <div data-testid="ViewHome">
+
     <LayoutTwoColumn>
-      ViewHome Component
+      <ContentAside>ASIDE</ContentAside>
+      <ContentMain>MAIN</ContentMain>
     </LayoutTwoColumn>
+    
   </div>
 );
 
