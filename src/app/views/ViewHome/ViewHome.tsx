@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { ContentAside, ContentMain, LayoutTwoColumn } from '../../layouts';
+import FeatUser from '../../features/FeatUser/FeatUser.lazy';
 
 interface ViewHomeProps {}
 
@@ -9,7 +10,7 @@ const ViewHome: FC<ViewHomeProps> = () => (
 
     <LayoutTwoColumn>
       <ContentAside>
-        ASIDE
+        <FeatUser />
       </ContentAside>
       <ContentMain>
         MAIN

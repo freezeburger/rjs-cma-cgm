@@ -1,3 +1,4 @@
+import { fecthUsers } from "./features/FeatUser/logic/fetch-users"
 import ViewHome from "./views/ViewHome"
 
 function App() {
@@ -8,6 +9,6 @@ function App() {
     </>
   )
 }
-
+fecthUsers()
 export default App
 
