@@ -1,0 +1,35 @@
+{
+  "usesTypeScript": true,
+  "usesStyledComponents": true,
+  "testLibrary": "Testing Library",
+  "component": {
+    "default": {
+      "path": "src/app/components",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": true,
+      "withLazy": false
+    },
+    "feature": {
+      "path": "src/app/features",
+      "withStyle": false,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": true
+    },
+    "layout": {
+      "path": "src/app/layouts",
+      "withStyle": true,
+      "withTest": false,
+      "withStory": false,
+      "withLazy": true
+    },
+    "view": {
+      "path": "src/app/views",
+      "withStyle": false,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": true
+    }
+  }
+}
