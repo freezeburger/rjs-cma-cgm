@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useCallback, useDebugValue, useId, useMemo, useState } from 'react';
 import { User } from './logic/interface';
 import { ActionTypes, useStore } from './store';
 
@@ -24,16 +24,43 @@ const UserLoader: FC<{ collection: User[] }> = ({ collection }) => {
 
 interface FeatUserProps { }
 
+
+
+export function useOnlineStatus() {
+
+  const [online] = useState(true)
+  useDebugValue('CGM');
+  return online;
+}
+
+
+const square = ( n:number ) => {
+  console.log('computing')
+  return n * n;
+} 
+
 const FeatUser: FC<FeatUserProps> = () => {
 
   // const { users } = useUsers();
   // const users:User[] =[];
 
+  const val = useMemo(()=>square(10),[])
+
   const {state:users, dispatch} = useStore();
+
+  const online= useOnlineStatus();
+
+
+  const handleClick = useCallback( () => dispatch({type:ActionTypes.USER_LIST_REQUEST}),[] )
+  const fieldId = useId()
 
   return (
     <div data-testid="FeatUser">
-      <button onClick={ () => dispatch({type:ActionTypes.USER_LIST_REQUEST})}>Load List</button>
+
+      <label htmlFor={fieldId}>Search</label>
+      <input type="text" id={fieldId} />
+
+      <button onClick={ handleClick }>Load List</button>
       <UserList collection={users} />
       <UserLoader collection={users} />
     </div>
