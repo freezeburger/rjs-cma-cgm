@@ -24,15 +24,12 @@ const UserLoader: FC<{ collection: User[] }> = ({ collection }) => {
 
 interface FeatUserProps { }
 
-
-
 export function useOnlineStatus() {
 
   const [online] = useState(true)
   useDebugValue('CGM');
   return online;
 }
-
 
 const square = ( n:number ) => {
   console.log('computing')
@@ -49,7 +46,6 @@ const FeatUser: FC<FeatUserProps> = () => {
   const {state:users, dispatch} = useStore();
 
   const online= useOnlineStatus();
-
 
   const handleClick = useCallback( () => dispatch({type:ActionTypes.USER_LIST_REQUEST}),[] )
   const fieldId = useId()

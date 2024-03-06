@@ -5,6 +5,8 @@ import { FC } from 'react';
 import { ContentAside, ContentMain, LayoutTwoColumn } from '../../layouts';
 import FeatUser from '../../features/FeatUser/FeatUser.lazy';
 import FeatUserCount from '../../features/FeatUser/FeatUserCount';
+import Location from '../../../Demo/Location/Location';
+import LocationBis from '../../../Demo/LocationBis/Location';
 
 interface ViewHomeProps {}
 
@@ -21,7 +23,9 @@ const ViewHome: FC<ViewHomeProps> = () => (
 
         <FeatUserCount></FeatUserCount>
         
-        MAIN
+        <Location/>
+        <LocationBis/>
+        
       </ContentMain>
     </LayoutTwoColumn>
 

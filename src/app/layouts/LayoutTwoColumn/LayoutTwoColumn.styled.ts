@@ -9,13 +9,15 @@ export const LayoutTwoColumnWrapper = styled.div`
         display: block;
         border:1px blue solid;
         height: 100vh;
-        width: 20vw;
+        width: 30vw;
+        padding:10px;
     }
 
     &>main{
         display: block;
         border:3px green solid;
         height: 100vh;
-        width: 80vw;
+        width: 70vw;
+        padding:10px;
     }
 `;

@@ -86,7 +86,7 @@ const greetEnhancer = (createStore) => {
 const store = configureStore({
     reducer: rootReducer,
     devTools:{
-        name:'DEMO'
+        name:'Location'
     }
     // enhancers:(getDefaultEnhancers) => getDefaultEnhancers().concat(greetEnhancer)
 });

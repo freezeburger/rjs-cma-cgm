@@ -62,7 +62,10 @@ function Location() {
 
 
 const store = configureStore({
-    reducer: rootReducer
+    reducer: rootReducer,
+    devTools:{
+        name:'Location Bis'
+    }
 });
 
  const LocationProvider = () => (
