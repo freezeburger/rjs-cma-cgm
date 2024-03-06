@@ -1,6 +1,9 @@
 export interface User {
     id: number
     name: string
+    /**
+     * Username at least 8 characters
+     */
     username: string
     email: string
     address: Address
@@ -8,6 +11,8 @@ export interface User {
     website: string
     company: Company
 }
+
+type Credentials = Pick<User,'username' | 'address'> ;
 
 export interface Address {
     street: string

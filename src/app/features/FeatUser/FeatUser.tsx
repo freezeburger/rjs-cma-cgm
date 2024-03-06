@@ -1,6 +1,7 @@
-import { FC } from 'react';
+import { FC, useContext } from 'react';
 import { useUsers } from './hooks/use-users.hook';
 import { User } from './logic/interface';
+import { Random } from './context/random';
 
 const UserList: FC<{ collection: User[] }> = ({ collection }) => {
   return (
@@ -27,6 +28,9 @@ interface FeatUserProps { }
 const FeatUser: FC<FeatUserProps> = () => {
 
   const { users } = useUsers();
+
+  const rand = useContext(Random);
+  console.warn(rand)
 
   return (
     <div data-testid="FeatUser">
