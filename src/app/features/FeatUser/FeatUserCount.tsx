@@ -1,14 +1,14 @@
-import { FC, useContext } from "react";
+import { FC } from "react";
 // import { useUsers } from "./hooks/use-users.hook";
-import { Random } from "./context/random";
-import { User } from "./logic/interface";
+import { useStore } from "./store";
+
 
 interface FeatUserCountProps { }
 
 const FeatUserCount: FC<FeatUserCountProps> = () => {
 
   // const { users } = useUsers();
-  const users: User[] = [];
+  const {state:users, /* dispatch */} = useStore();
 
   return (
     <>

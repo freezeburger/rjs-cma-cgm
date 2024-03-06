@@ -1,9 +1,6 @@
-import { FC, useContext } from 'react';
-import { useUsers } from './hooks/use-users.hook';
+import { FC } from 'react';
 import { User } from './logic/interface';
-import { Random } from './context/random';
 import { ActionTypes, useStore } from './store';
-
 
 const UserList: FC<{ collection: User[] }> = ({ collection }) => {
   return (
@@ -32,7 +29,7 @@ const FeatUser: FC<FeatUserProps> = () => {
   // const { users } = useUsers();
   // const users:User[] =[];
 
-  const [users, dispatch] = useStore();
+  const {state:users, dispatch} = useStore();
 
   return (
     <div data-testid="FeatUser">

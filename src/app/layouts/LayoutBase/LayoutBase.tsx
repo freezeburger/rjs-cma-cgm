@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from 'react';
+import { FC, PropsWithChildren, memo } from 'react';
 import { LayoutBaseWrapper } from './LayoutBase.styled';
 
 import './LayoutBase.css';
